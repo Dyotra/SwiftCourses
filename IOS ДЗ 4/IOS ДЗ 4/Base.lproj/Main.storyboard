@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rct-ij-Owf">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="SsD-0U-lgK">
+            <objects>
+                <tabBarController id="Rct-ij-Owf" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kks-RM-4Dh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="KE4-lu-2jK" kind="relationship" relationship="viewControllers" id="rei-ST-YCt"/>
+                        <segue destination="dbC-fA-ADY" kind="relationship" relationship="viewControllers" id="fKY-xf-VfI"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="587-Fk-pHd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-833" y="-367"/>
+        </scene>
+        <!--Обо мне-->
+        <scene sceneID="fJl-13-XkH">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9KP-Va-cFH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="KE4-lu-2jK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Обо мне" selectedImage="figure.stand" catalog="system" id="NPZ-Po-DHS"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WCh-8F-pTK">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UYS-bb-tEJ" kind="relationship" relationship="rootViewController" id="hgf-s6-eGP"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-18" y="-726"/>
+        </scene>
+        <!--О семье-->
+        <scene sceneID="YkX-fg-DV7">
+            <objects>
+                <navigationController id="dbC-fA-ADY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="О семье" selectedImage="figure.2.and.child.holdinghands" catalog="system" id="mY4-lu-dKV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hIS-vs-4g1">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DMf-5A-1X1" kind="relationship" relationship="rootViewController" id="EU9-PS-kKA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F2D-DR-vjg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-19" y="35"/>
+        </scene>
+        <!--FirstViewController-->
+        <scene sceneID="Fnf-oh-Zvo">
+            <objects>
+                <viewController storyboardIdentifier="firstVC" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="UYS-bb-tEJ" userLabel="FirstViewController" customClass="FirstViewController" customModule="IOS_ДЗ_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O0M-vp-LmA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtu-mR-1WS">
+                                <rect key="frame" x="25" y="303" width="343" height="378"/>
+                                <string key="text">Меня зовут Диас. Выпускник НИШ ХБН г. Усть-Каменогорск. В этом году закончил МГУ по специальности "экология и природопользование". В данный момент хочу сменить специальность и прохожу курсы IOS разработчика.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Id-5r-9lW">
+                                <rect key="frame" x="126.66666666666669" y="706" width="140" height="34.333333333333371"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Подробнее"/>
+                                <connections>
+                                    <action selector="detailed:" destination="UYS-bb-tEJ" eventType="touchUpInside" id="o1J-zH-hV2"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Фото 14.06.2023, 16.38" translatesAutoresizingMaskIntoConstraints="NO" id="vWd-mH-Dg8">
+                                <rect key="frame" x="76" y="46" width="240" height="320"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WD2-pU-7nd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WD2-pU-7nd" firstAttribute="trailing" secondItem="Gtu-mR-1WS" secondAttribute="trailing" constant="25" id="HGt-Lj-yAb"/>
+                            <constraint firstItem="Gtu-mR-1WS" firstAttribute="top" secondItem="WD2-pU-7nd" secondAttribute="top" constant="200" id="ItB-ll-1fo"/>
+                            <constraint firstItem="vWd-mH-Dg8" firstAttribute="leading" secondItem="WD2-pU-7nd" secondAttribute="leading" constant="76" id="KHW-47-tUP"/>
+                            <constraint firstItem="5Id-5r-9lW" firstAttribute="top" secondItem="Gtu-mR-1WS" secondAttribute="bottom" constant="25" id="Wwc-Mb-yoK"/>
+                            <constraint firstItem="Gtu-mR-1WS" firstAttribute="leading" secondItem="WD2-pU-7nd" secondAttribute="leading" constant="25" id="aXX-Wq-XES"/>
+                            <constraint firstItem="5Id-5r-9lW" firstAttribute="centerX" secondItem="O0M-vp-LmA" secondAttribute="centerX" id="dYF-fk-iJe"/>
+                            <constraint firstItem="vWd-mH-Dg8" firstAttribute="top" secondItem="O0M-vp-LmA" secondAttribute="top" constant="46" id="dor-KI-Jlx"/>
+                            <constraint firstItem="5Id-5r-9lW" firstAttribute="top" secondItem="vWd-mH-Dg8" secondAttribute="bottom" constant="340" id="s76-x0-eN4"/>
+                            <constraint firstItem="WD2-pU-7nd" firstAttribute="trailing" secondItem="vWd-mH-Dg8" secondAttribute="trailing" constant="77" id="wHF-eG-Gq3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="atf-tQ-uiU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7fg-Wv-9Wd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="-726"/>
+        </scene>
+        <!--SecondViewController-->
+        <scene sceneID="kgW-0r-chH">
+            <objects>
+                <viewController storyboardIdentifier="secondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bea-Gx-2SR" userLabel="SecondViewController" customClass="SecondViewController" customModule="IOS_ДЗ_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DHe-g9-soS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AO-nX-z82">
+                                <rect key="frame" x="25" y="84" width="343" height="709"/>
+                                <string key="text">OS-разработчик, или iOS developer, — это программист, который пишет сервисы и программы для айфонов. Из-за особенностей устройств Apple и их операционной системы для них нужно писать специальный код.
+
+Основной язык, на котором пишут код iOS-разработчики, — Swift. Apple разработала его специально для своих устройств в 2014 году. По сравнению с языком Objective-C, который использовали раньше, он более быстрый, простой и устойчивый к ошибкам.
+
+Чтобы писать на языке Swift, нужна специальная среда разработки — Xcode. Она корректно работает только на устройствах Apple: MacBook, iMac, Mac Pro, Mac Studio, Mac mini.
+
+iOS-разработчики пишут все сервисы, которые можно скачать в Apple Store. Игры, банковские приложения, заметки, службы доставки — результат труда iOS-разработчиков. Без них не обойтись ни одной компании, которая хочет адаптировать свои сервисы для устройств Apple.</string>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9tJ-fK-BtK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9tJ-fK-BtK" firstAttribute="bottom" secondItem="4AO-nX-z82" secondAttribute="bottom" constant="25" id="GqG-gG-rxW"/>
+                            <constraint firstItem="4AO-nX-z82" firstAttribute="top" secondItem="9tJ-fK-BtK" secondAttribute="top" constant="25" id="Nwo-mm-WbU"/>
+                            <constraint firstAttribute="trailing" secondItem="4AO-nX-z82" secondAttribute="trailing" constant="25" id="ekc-on-NhB"/>
+                            <constraint firstItem="4AO-nX-z82" firstAttribute="leading" secondItem="DHe-g9-soS" secondAttribute="leading" constant="25" id="ihg-FV-lfk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wuC-jG-APq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1866" y="-726"/>
+        </scene>
+        <!--ThirdViewController-->
+        <scene sceneID="xRQ-9O-9yv">
+            <objects>
+                <viewController storyboardIdentifier="thirdVC" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="DMf-5A-1X1" userLabel="ThirdViewController" customClass="ThirdViewController" customModule="IOS_ДЗ_4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="010-ga-hMh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Dh-Mz-fds">
+                                <rect key="frame" x="25" y="303" width="343" height="268.66666666666674"/>
+                                <string key="text">- Миллионы приходят, уходят, не в них счастье.Самым важным на свете всегда будут люди в этой комнате, вот здесь, сейчас. - Семья не выбирается. Семья дается тебе Богом.  - Семья - это то, ради чего мы живем, дышим и умираем</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPr-6e-eZ8">
+                                <rect key="frame" x="126.66666666666669" y="596.66666666666663" width="140" height="34.333333333333371"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Подробнее"/>
+                                <connections>
+                                    <action selector="detailed2:" destination="DMf-5A-1X1" eventType="touchUpInside" id="y8z-j7-XXp"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="220x330" translatesAutoresizingMaskIntoConstraints="NO" id="3Hc-NW-SFA">
+                                <rect key="frame" x="76" y="45.999999999999986" width="240" height="210.66666666666663"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SR1-JL-3rx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Hc-NW-SFA" firstAttribute="leading" secondItem="SR1-JL-3rx" secondAttribute="leading" constant="76" id="3zi-4p-Jra"/>
+                            <constraint firstItem="3Dh-Mz-fds" firstAttribute="top" secondItem="SR1-JL-3rx" secondAttribute="top" constant="200" id="CJe-8z-FdR"/>
+                            <constraint firstItem="3Dh-Mz-fds" firstAttribute="leading" secondItem="SR1-JL-3rx" secondAttribute="leading" constant="25" id="ENL-jZ-H5H"/>
+                            <constraint firstItem="UPr-6e-eZ8" firstAttribute="centerX" secondItem="010-ga-hMh" secondAttribute="centerX" id="Jxm-py-GzH"/>
+                            <constraint firstItem="UPr-6e-eZ8" firstAttribute="top" secondItem="3Hc-NW-SFA" secondAttribute="bottom" constant="340" id="Pm0-bT-eru"/>
+                            <constraint firstItem="3Hc-NW-SFA" firstAttribute="top" secondItem="010-ga-hMh" secondAttribute="top" constant="46" id="V46-pg-AaR"/>
+                            <constraint firstItem="SR1-JL-3rx" firstAttribute="trailing" secondItem="3Hc-NW-SFA" secondAttribute="trailing" constant="77" id="naq-ih-k2K"/>
+                            <constraint firstItem="UPr-6e-eZ8" firstAttribute="top" secondItem="3Dh-Mz-fds" secondAttribute="bottom" constant="25" id="odj-GJ-a5v"/>
+                            <constraint firstItem="SR1-JL-3rx" firstAttribute="trailing" secondItem="3Dh-Mz-fds" secondAttribute="trailing" constant="25" id="qv4-jq-gg3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6kz-9B-c5b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ct-F1-ENK" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960" y="35"/>
+        </scene>
+        <!--FourthViewController-->
+        <scene sceneID="e9p-u4-dkI">
+            <objects>
+                <viewController storyboardIdentifier="fourthVC" id="Q8v-aw-Dgr" userLabel="FourthViewController" customClass="FourthViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KRY-TH-vbe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0C-wC-zWn">
+                                <rect key="frame" x="25" y="84" width="343" height="709"/>
+                                <mutableString key="text">Нет ничего важнее семьи — мем, в котором один из главных героев серии фильмов «Форсаж» Доминик Торетто всячески попадает в мем с шутками, связанные с важностью семьи.
+
+Мем зародился после выхода фильма «Форсаж 9» в США, потом его начали переводить на русский. Сам фильм вышел в России раньше, но мемом Торетто не стал.
+
+Доминик постоянно говорит о важности и силе семьи, потому как в последних фильмах серии «Форсаж» он сильно посвящён своей семье, что стало поводом для мема.
+
+В каждом меме этого типа отсутствует Доминик Торетто, причём обычно появляется неожиданно. Сразу после появления он говорит фразы о семье, о её важности. Обычно появляется после того, как кто-то произнёс слово «семья» и обычно на своей машине.
+
+Мем может быть как в формате картинки, так и в виде видео.</mutableString>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zbY-SI-g3r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zbY-SI-g3r" firstAttribute="bottom" secondItem="X0C-wC-zWn" secondAttribute="bottom" constant="25" id="6cB-4x-6hW"/>
+                            <constraint firstItem="X0C-wC-zWn" firstAttribute="top" secondItem="zbY-SI-g3r" secondAttribute="top" constant="25" id="Fqd-iT-6dm"/>
+                            <constraint firstItem="X0C-wC-zWn" firstAttribute="leading" secondItem="zbY-SI-g3r" secondAttribute="leading" constant="25" id="YcH-Op-ga1"/>
+                            <constraint firstAttribute="trailing" secondItem="X0C-wC-zWn" secondAttribute="trailing" constant="25" id="k0m-wZ-uKc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZFy-th-Dwy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1865" y="35"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="220x330" width="69.666664123535156" height="110"/>
+        <image name="figure.2.and.child.holdinghands" catalog="system" width="128" height="90"/>
+        <image name="figure.stand" catalog="system" width="74" height="128"/>
+        <image name="Фото 14.06.2023, 16.38" width="480" height="320"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
